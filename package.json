@@ -1,0 +1,30 @@
+{
+  "name": "github-activity-extension",
+  "version": "1.0.0",
+  "description": "Toggle display of noisy activity notifications in issue & PR threads",
+  "main": "app.js",
+  "scripts": {
+    "version": "node ./scripts/set-manifest-version.js",
+    "compress": "cd ./src/ && zip -r ../dist/build-$npm_package_version.zip .",
+    "build": "npm run version && npm run compress",
+    "publish:ws": "source .env && cd ./src/ && webstore upload --source=../dist/build-$npm_package_version.zip --auto-publish --extension-id $WS_ID --client-id $WS_CLIENT_ID --client-secret $WS_CLIENT_SECRET --refresh-token $WS_REFRESH_TOKEN",
+    "publish:aom": "source .env && cd ./src/ && web-ext-submit -s=. -a=../dist/ --id $AOM_ID --api-key $AOM_API_KEY --api-secret $AOM_API_SECRET ",
+    "edit": "open https://chrome.google.com/webstore/developer/dashboard",
+    "release": "npm run publish && npm run edit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darcyclarke/github-activity-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darcyclarke/github-activity-extension/issues"
+  },
+  "homepage": "https://github.com/darcyclarke/github-activity-extension#readme",
+  "devDependencies": {
+    "chrome-webstore-upload-cli": "^1.2.0",
+    "web-ext-submit": "^3.0.0"
+  }
+}

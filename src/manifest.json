@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "github-activity-extension",
+  "author": "Darcy Clarke <darcy@darcyclarke.me>",
+  "description": "Toggle display of noisy activity notifications in issue & PR threads ",
+  "version": "1.0.0",
+  "homepage_url": "https://github.com/darcyclarke/github-activity-extension",
+  "incognito": "spanning",
+  "background": {
+    "scripts": [
+      "app.js"
+    ]
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://github.com/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "inject.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
