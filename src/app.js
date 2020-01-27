@@ -1,16 +1,12 @@
-
-/* global chrome */
-
-chrome.runtime.onMessage.addListener(function(message) {
-  console.log('extension: injecting...')
-  if (message === 'runContentScript'){
-    chrome.tabs.insertCSS({ file: 'styles.css' })
-    chrome.tabs.executeScript({ file: 'inject.js' })
-  }
+browser = chrome || browser
+browser.browserAction.onClicked.addListener(function (tab) {
+  browser.tabs.executeScript(tab.id,{
+    code: "toggleActivityItems();"
+  })
 })
 
-chrome.browserAction.onClicked.addListener(function (tab) {
-  console.log('extension: button clicked')
+browser.runtime.onMessage.addListener(function(request, sender) {
+  browser.browserAction.setIcon({
+    path: request.path
+  })
 })
-
-console.log('extension: app loaded')
