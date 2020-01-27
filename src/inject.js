@@ -7,19 +7,20 @@ let $activityButton
 let $activityButtonText
 let $actions
 
-window.addEventListener('load', function(e) {
+window.addEventListener('load', function (e) {
   $actions = document.querySelector('.gh-header-actions')
-  $activityItems = Array.from(document.querySelectorAll('.TimelineItem, .Details-element'))
-    .filter(el => parseInt(window.getComputedStyle(el).height) < 100)
   $activityButton = $actions.appendChild(button())
   $activityButtonText = $activityButton.querySelector('span')
-  store.get(['activityVisible'], (data) => {
-    if (data.activityVisible) {
-      showItems()
-    } else {
-      hideItems()
-    }
-  })
+  setTimeout(function () {
+    findItems()
+    store.get(['activityVisible'], (data) => {
+      if (data.activityVisible) {
+        showItems()
+      } else {
+        hideItems()
+      }
+    })
+  }, 1000)
 })
 
 document.addEventListener('keyup', function(e) {
@@ -29,6 +30,12 @@ document.addEventListener('keyup', function(e) {
     toggleActivityItems()
   }
 })
+
+function findItems () {
+  $activityItems = Array.from(document.querySelectorAll('.TimelineItem, .Details-element'))
+    .filter(el => parseInt(window.getComputedStyle(el).height) < 100)
+  return
+}
 
 function toggleActivityItems () {
   store.get(['activityVisible'], (data) => {
@@ -51,6 +58,7 @@ function showItems () {
       "128": "icon-128.png"
     }
   })
+  findItems()
 }
 
 function hideItems () {
