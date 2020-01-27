@@ -6,7 +6,7 @@
 
 # Install
 - [Install the Chrome Extension](https://chrome.google.com/webstore/detail/cjdabhgohjkdlhbalecgfhbfdmdnmoon/publish-review)
-- [Install the Firefox Add-on](https://addons.mozilla.org/en-CA/firefox/addon/darcy-clarke/)
+- [Install the Firefox Add-on](https://addons.mozilla.org/en-CA/firefox/addon/github-activity-extension/)
 
 # Usage
 - Click the add-on/extension button OR
