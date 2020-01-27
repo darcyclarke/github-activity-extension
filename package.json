@@ -1,6 +1,6 @@
 {
   "name": "github-activity-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toggle display of noisy activity notifications in issue & PR threads",
   "main": "app.js",
   "scripts": {
