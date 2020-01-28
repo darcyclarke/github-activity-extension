@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://github.com/darcyclarke/github-activity-extension/blob/master/src/icon.png?raw=true" width="100px" height="auto"><br>github activity web extension</h1>
+<h1 align="center"><img src="https://github.com/darcyclarke/github-activity-extension/blob/master/src/icon.png?raw=true" width="100px" height="auto"><br>GitHub Activity Web Extension</h1>
 
 <blockquote>
   <p align="center">Browser Extension to toggle display of noisy activity notifications in issue & PR threads</p>
