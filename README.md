@@ -13,3 +13,5 @@
 - Click the "Show/Hide Activity" button OR
 - Use `[ctrl]+[/]` OR
 - Use `[crtrl]+[a]`
+
+![screen](https://user-images.githubusercontent.com/459713/73228567-f90a3a00-4144-11ea-934a-3753ce0eb7bd.gif)
