@@ -5,7 +5,7 @@
 </blockquote>
 
 # Install
-- [Install the Chrome Extension](https://chrome.google.com/webstore/detail/cjdabhgohjkdlhbalecgfhbfdmdnmoon/publish-review)
+- [Install the Chrome Extension](https://chrome.google.com/webstore/detail/github-activity-extension/cjdabhgohjkdlhbalecgfhbfdmdnmoon)
 - [Install the Firefox Add-on](https://addons.mozilla.org/en-CA/firefox/addon/github-activity-extension/)
 
 # Usage
