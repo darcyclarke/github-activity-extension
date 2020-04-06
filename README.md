@@ -17,15 +17,14 @@
 ![screen](https://user-images.githubusercontent.com/459713/73228567-f90a3a00-4144-11ea-934a-3753ce0eb7bd.gif)
 
 # Roadmap
-- [ ] Update generic capture logic (ie. capture everything BUT comments `.TimelineItem .js-comment-container`)
-- [ ] Identify Zenhub-specific labels/items (macro: `[ctrl]+[z]+[/]` or `[ctrl]+[z]+[a]`)
-- [ ] Add notficication groups/distinctions
-- [ ] Add UI/selection for hidden/visible groups
-  - Select/Unselect All
-  - [ ] Users (ie. `octicon-person`)
-  - [ ] Labels (ie. `octicon-tag`)
-  - [ ] Mentions (ie. `octicon-bookmark`)
-  - [ ] Projects (ie. `octicon-project`)
-  - [ ] Status (ie. `octicon-circle-slash` ...)
-  - [ ] ZenHub Dependencies
-  - [ ] ZenHub Epics
+- [x] Update generic capture logic (ie. capture everything BUT comments `.TimelineItem .js-comment-container`)
+- [x] Identify Zenhub-specific labels/items
+- [x] Add notficication groups/distinctions
+- [x] Add UI/selection for hidden/visible groups
+  - [ ] Select/Unselect All
+- [ ] Add count for all groups
+- [ ] Add macro toggle for all groups
+- [ ] Save state
+- [ ] Fix default icon & branding
+- [ ] Update screenshots
+- [ ] Make new release
